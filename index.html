@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Astra.AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --text-primary: #111;
+      --text-secondary: #555;
+      --text-muted: #999;
+      --border: #e8e8e8;
+      --bg: #fff;
+      --bg-subtle: #fafafa;
+      --accent: #0071e3;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text-primary);
+    }
+    .nav-logo .dot { color: #f4a024; }
+    .nav-logo .ai  { color: #1e6fbf; }
+
+    .nav-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 680px;
+      margin: 80px auto 0;
+      padding: 0 24px;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--text-primary);
+    }
+
+    .hero-meta {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .dot-sep {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      opacity: 0.4;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      max-width: 680px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    .divider hr { border: none; border-top: 1px solid var(--border); }
+
+    /* ── Summary bar ── */
+    .summary {
+      max-width: 680px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+    }
+
+    .summary-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .summary-title {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+    .badge-green { background: #e6f9f0; color: #1a8a52; }
+    .badge-blue  { background: #e6f0ff; color: #1e5fbf; }
+
+    /* ── Content ── */
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+    }
+
+    .section {
+      margin-bottom: 52px;
+    }
+
+    .section-number {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 650;
+      letter-spacing: -0.4px;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    .callout {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-top: 4px;
+    }
+
+    .callout strong { color: var(--text-primary); font-weight: 600; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 52px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer .footer-logo {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    footer .footer-logo .dot { color: #f4a024; }
+    footer .footer-logo .ai  { color: #1e6fbf; }
+
+    footer p { font-size: 13px; color: var(--text-muted); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; }
+      .hero { margin-top: 52px; }
+      .hero h1 { font-size: 30px; letter-spacing: -1px; }
+      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">Astra<span class="dot">.</span><span class="ai">AI</span></span>
+  <span class="nav-label">Legal</span>
+</nav>
+
+<div class="hero">
+  <p class="hero-eyebrow">Legal</p>
+  <h1>Privacy Policy</h1>
+  <div class="hero-meta">
+    <span>Effective March 2, 2026</span>
+    <div class="dot-sep"></div>
+    <span>Version 1.0</span>
+    <div class="dot-sep"></div>
+    <span>Android</span>
+  </div>
+</div>
+
+<div class="divider"><hr></div>
+
+<div class="summary">
+  <div class="summary-box">
+    <p class="summary-title">The short version</p>
+    <div class="summary-item">
+      <span class="badge badge-green">✓ No account</span>
+      We never ask you to sign up or log in.
+    </div>
+    <div class="summary-item">
+      <span class="badge badge-green">✓ No tracking</span>
+      No analytics, ads, or third-party trackers.
+    </div>
+    <div class="summary-item">
+      <span class="badge badge-green">✓ Local only</span>
+      Your chat history lives only on your device.
+    </div>
+    <div class="summary-item">
+      <span class="badge badge-blue">↗ Gemini API</span>
+      Messages are sent to Google Gemini to generate replies.
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section">
+    <p class="section-number">01</p>
+    <h2>Introduction</h2>
+    <p>
+      Astra.AI is an AI-powered chat application built for Android. This Privacy Policy describes
+      how your information is — and isn't — handled when you use the app. We've kept it as
+      straightforward as possible.
+    </p>
+    <p>
+      Using Astra.AI means you agree to this policy. If you have any questions, you can always
+      reach us at the contact information below.
+    </p>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">02</p>
+    <h2>What we collect</h2>
+    <p>Almost nothing. Here's the full picture:</p>
+    <ul>
+      <li>No account or sign-in is required to use Astra.AI.</li>
+      <li>We do not collect your name, email address, phone number, or any personal identifiers.</li>
+      <li>We do not run analytics or track how you use the app.</li>
+      <li>We do not serve ads or share data with advertisers.</li>
+    </ul>
+    <div class="callout">
+      <strong>Your conversation history</strong> is stored locally on your device using on-device storage.
+      It is never uploaded to any server operated by Astra.AI.
+    </div>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">03</p>
+    <h2>Microphone & voice</h2>
+    <p>
+      Astra.AI includes a voice input feature that converts your speech to text.
+      Microphone access is requested only when you tap the voice button.
+    </p>
+    <ul>
+      <li>Speech recognition is handled by Android's on-device Speech Recognition engine.</li>
+      <li>No audio is recorded, stored, or transmitted by Astra.AI.</li>
+      <li>You can revoke microphone permission at any time in your device settings.</li>
+    </ul>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">04</p>
+    <h2>Google Gemini API</h2>
+    <p>
+      Astra.AI uses Google Gemini 2.0 to generate responses to your messages. When you send
+      a message, its text is transmitted to Google's servers to produce a reply.
+    </p>
+    <ul>
+      <li>This transmission is necessary for the core functionality of the app.</li>
+      <li>Data sent to Gemini is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+      <li>Astra.AI does not log, store, or have access to the content sent to or received from Gemini.</li>
+    </ul>
+    <div class="callout">
+      We recommend not sharing sensitive personal information — such as passwords, financial details,
+      or ID numbers — in your chats.
+    </div>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">05</p>
+    <h2>Data storage & security</h2>
+    <p>
+      Your chat history is stored locally on your device. It is not synced to the cloud
+      or backed up to any server by Astra.AI.
+    </p>
+    <ul>
+      <li>You can delete your history at any time from within the app.</li>
+      <li>Uninstalling Astra.AI will permanently remove all locally stored data.</li>
+    </ul>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">06</p>
+    <h2>Third-party services</h2>
+    <p>Astra.AI integrates with one external service:</p>
+    <ul>
+      <li>
+        <strong>Google Gemini API</strong> — used to generate AI responses.
+        Governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+      </li>
+    </ul>
+    <p>No other third-party SDKs, analytics tools, or advertising networks are used.</p>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">07</p>
+    <h2>Children's privacy</h2>
+    <p>
+      Astra.AI is not directed at children under the age of 13. We do not knowingly collect
+      any information from children. If you believe your child has used this app and has a
+      privacy concern, please contact us and we will address it promptly.
+    </p>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">08</p>
+    <h2>Changes to this policy</h2>
+    <p>
+      We may revise this Privacy Policy as the app evolves. When we do, we'll update the
+      effective date at the top of this page. We encourage you to review it periodically.
+      Continued use of Astra.AI after changes constitutes your acceptance of the updated policy.
+    </p>
+  </div>
+
+  <hr class="section-rule">
+
+  <div class="section">
+    <p class="section-number">09</p>
+    <h2>Contact</h2>
+    <p>
+      Have a question about this policy or how Astra.AI handles your data? We're happy to help.
+    </p>
+    <p>
+      Email us at <a href="mailto:ameena.dev@email.com">your@email.com</a> 
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-logo">Astra<span class="dot">.</span><span class="ai">AI</span></span>
+  <p>&copy; 2026 Astra.AI · All rights reserved.</p>
+</footer>
+
+</body>
+</html>
